@@ -1,0 +1,73 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e41]
+  - generic [ref=e44]:
+    - complementary [ref=e46]:
+      - generic [ref=e47]:
+        - img [ref=e48]
+        - generic [ref=e52]: MediSync
+      - navigation [ref=e53]:
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - link "Dashboard" [ref=e56] [cursor=pointer]:
+              - /url: /clinic
+              - img [ref=e57]
+              - text: Dashboard
+          - listitem [ref=e62]:
+            - link "Doctors" [ref=e63] [cursor=pointer]:
+              - /url: /clinic/doctors
+              - img [ref=e64]
+              - text: Doctors
+          - listitem [ref=e76]:
+            - link "Patients" [ref=e77] [cursor=pointer]:
+              - /url: /clinic/patients
+              - img [ref=e78]
+              - text: Patients
+          - listitem [ref=e83]:
+            - link "Appointments" [ref=e84] [cursor=pointer]:
+              - /url: /clinic/appointments
+              - img [ref=e85]
+              - text: Appointments
+          - listitem [ref=e87]:
+            - link "Settings" [ref=e88] [cursor=pointer]:
+              - /url: /clinic/settings
+              - img [ref=e89]
+              - text: Settings
+    - generic [ref=e92]:
+      - banner [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - img [ref=e97]
+            - generic [ref=e100]:
+              - paragraph [ref=e101]: mhmd ali
+              - paragraph [ref=e102]: CLINIC ADMIN
+          - button "Sign out" [ref=e103]:
+            - img [ref=e104]
+      - main [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - heading "Clinic Dashboard" [level=1] [ref=e110]
+            - paragraph [ref=e111]: Managing 0 clinics
+          - generic [ref=e112]:
+            - generic [ref=e115]:
+              - generic [ref=e116]:
+                - paragraph [ref=e117]: Total Clinics
+                - paragraph [ref=e118]: "0"
+              - img [ref=e120]
+            - generic [ref=e126]:
+              - generic [ref=e127]:
+                - paragraph [ref=e128]: Active Doctors
+                - paragraph [ref=e129]: "0"
+              - img [ref=e131]
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - paragraph [ref=e147]: Total Patients
+                - paragraph [ref=e148]: "0"
+              - img [ref=e150]
+            - generic [ref=e157]:
+              - generic [ref=e158]:
+                - paragraph [ref=e159]: Today's Appointments
+                - paragraph [ref=e160]: "0"
+              - img [ref=e162]
+          - generic [ref=e164]:
+            - heading "Today's Appointments" [level=3] [ref=e166]
+            - paragraph [ref=e168]: No appointments scheduled for today.

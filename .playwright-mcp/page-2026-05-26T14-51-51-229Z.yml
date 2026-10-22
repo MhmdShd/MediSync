@@ -1,0 +1,40 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - generic [ref=e10]: MediSync
+      - paragraph [ref=e11]: Clinic Management System
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - heading "Sign in" [level=3] [ref=e14]
+        - paragraph [ref=e15]: Enter your phone number and password to continue
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: Phone Number*
+            - generic [ref=e20]:
+              - button "US Flag +1" [ref=e50]:
+                - img "US Flag" [ref=e51]
+                - generic [ref=e24]: "+1"
+                - img [ref=e25]
+              - textbox "Phone Number" [active] [ref=e27]:
+                - /placeholder: "7701234567"
+          - generic [ref=e28]:
+            - generic [ref=e29]: Password*
+            - generic [ref=e30]:
+              - textbox "Password" [ref=e31]:
+                - /placeholder: Enter password
+              - button "Show password" [ref=e32]:
+                - img [ref=e33]
+          - button "Sign in" [ref=e36]
+        - generic [ref=e37]:
+          - link "Forgot password?" [ref=e38] [cursor=pointer]:
+            - /url: /reset-password
+          - generic [ref=e39]:
+            - text: New clinic?
+            - link "Register" [ref=e40] [cursor=pointer]:
+              - /url: /register
+  - button "Open Next.js Dev Tools" [ref=e46] [cursor=pointer]:
+    - img [ref=e47]
+  - alert [ref=e52]

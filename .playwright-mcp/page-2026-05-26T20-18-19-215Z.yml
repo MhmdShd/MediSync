@@ -1,0 +1,80 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e41]
+  - generic [ref=e45]:
+    - complementary [ref=e47]:
+      - generic [ref=e48]:
+        - img [ref=e49]
+        - generic [ref=e53]: MediSync
+      - navigation [ref=e54]:
+        - list [ref=e55]:
+          - listitem [ref=e56]:
+            - link "Dashboard" [ref=e57] [cursor=pointer]:
+              - /url: /clinic
+              - img [ref=e58]
+              - text: Dashboard
+          - listitem [ref=e63]:
+            - link "Doctors" [ref=e64] [cursor=pointer]:
+              - /url: /clinic/doctors
+              - img [ref=e65]
+              - text: Doctors
+          - listitem [ref=e77]:
+            - link "Patients" [ref=e78] [cursor=pointer]:
+              - /url: /clinic/patients
+              - img [ref=e79]
+              - text: Patients
+          - listitem [ref=e84]:
+            - link "Appointments" [ref=e85] [cursor=pointer]:
+              - /url: /clinic/appointments
+              - img [ref=e86]
+              - text: Appointments
+          - listitem [ref=e88]:
+            - link "Settings" [ref=e89] [cursor=pointer]:
+              - /url: /clinic/settings
+              - img [ref=e90]
+              - text: Settings
+    - generic [ref=e93]:
+      - banner [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - img [ref=e98]
+            - generic [ref=e101]:
+              - paragraph [ref=e102]: ahmad
+              - paragraph [ref=e103]: CLINIC ADMIN
+          - button "Sign out" [ref=e104]:
+            - img [ref=e105]
+      - main [ref=e108]:
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - heading "Appointments" [level=1] [ref=e172]
+            - paragraph [ref=e173]: Manage and book appointments for Ahmad Clinic
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - textbox [ref=e176]
+              - combobox [ref=e177]:
+                - option "All Statuses" [selected]
+                - option "Scheduled"
+                - option "Confirmed"
+                - option "In Progress"
+                - option "Completed"
+                - option "Cancelled"
+                - option "No Show"
+              - button "Clear" [ref=e178]
+              - button "Book Appointment" [ref=e179]
+            - generic [ref=e180]:
+              - heading "All Appointments" [level=3] [ref=e182]
+              - table [ref=e185]:
+                - rowgroup [ref=e186]:
+                  - row "Date Time Patient Doctor Status" [ref=e187]:
+                    - columnheader "Date" [ref=e188]
+                    - columnheader "Time" [ref=e189]
+                    - columnheader "Patient" [ref=e190]
+                    - columnheader "Doctor" [ref=e191]
+                    - columnheader "Status" [ref=e192]
+                - rowgroup [ref=e193]:
+                  - row "Jun 3, 2026 11:30 – 12:00 ali Zeinab SCHEDULED" [ref=e194] [cursor=pointer]:
+                    - cell "Jun 3, 2026" [ref=e195]
+                    - cell "11:30 – 12:00" [ref=e196]
+                    - cell "ali" [ref=e197]
+                    - cell "Zeinab" [ref=e198]
+                    - cell "SCHEDULED" [ref=e199]:
+                      - generic [ref=e200]: SCHEDULED

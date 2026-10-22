@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - generic [ref=e10]: MediSync
+      - paragraph [ref=e11]: Clinic Management System
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - heading "Sign in" [level=3] [ref=e14]
+        - paragraph [ref=e15]: Enter your phone number and password to continue
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: Phone Number*
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - button "LB Flag" [ref=e42]:
+                  - img "LB Flag" [ref=e43]
+                  - img [ref=e24]
+                - textbox [ref=e26]: "+961"
+              - textbox "Phone Number" [ref=e27]:
+                - /placeholder: "7701234567"
+                - text: "71221510"
+          - generic [ref=e28]:
+            - generic [ref=e29]: Password*
+            - generic [ref=e30]:
+              - textbox "Password" [ref=e31]:
+                - /placeholder: Enter password
+                - text: Test1234
+              - button "Show password" [ref=e32]:
+                - img [ref=e33]
+          - alert [ref=e44]: Invalid phone number or password
+          - button "Sign in" [ref=e36]
+        - generic [ref=e37]:
+          - link "Forgot password?" [ref=e38] [cursor=pointer]:
+            - /url: /reset-password
+          - generic [ref=e39]:
+            - text: New clinic?
+            - link "Register" [ref=e40] [cursor=pointer]:
+              - /url: /register
+  - alert [ref=e41]

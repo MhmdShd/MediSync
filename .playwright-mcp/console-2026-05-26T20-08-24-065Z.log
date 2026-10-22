@@ -1,0 +1,3 @@
+[      84ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://77.68.52.135:7000/login:0
+[   72977ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://77.68.52.135:7000/login?:0
+[  177404ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://77.68.52.135:7000/login?:0

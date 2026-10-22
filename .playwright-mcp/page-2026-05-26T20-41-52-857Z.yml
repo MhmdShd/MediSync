@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e41]
+  - generic [ref=e44]:
+    - complementary [ref=e46]:
+      - generic [ref=e47]:
+        - img [ref=e48]
+        - generic [ref=e52]: MediSync
+      - navigation [ref=e53]:
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - link "Dashboard" [ref=e56] [cursor=pointer]:
+              - /url: /patient/dashboard
+              - img [ref=e57]
+              - text: Dashboard
+          - listitem [ref=e62]:
+            - link "Records" [ref=e63] [cursor=pointer]:
+              - /url: /patient/records
+              - img [ref=e64]
+              - text: Records
+          - listitem [ref=e67]:
+            - link "Appointments" [ref=e68] [cursor=pointer]:
+              - /url: /patient/appointments
+              - img [ref=e69]
+              - text: Appointments
+          - listitem [ref=e71]:
+            - link "Profile" [ref=e72] [cursor=pointer]:
+              - /url: /patient/profile
+              - img [ref=e73]
+              - text: Profile
+    - generic [ref=e76]:
+      - banner [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - img [ref=e81]
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: Ali Hassan
+              - paragraph [ref=e86]: PATIENT
+          - button "Sign out" [ref=e87]:
+            - img [ref=e88]
+      - main [ref=e91]:
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - heading "Welcome, Ali Hassan" [level=1] [ref=e94]
+            - paragraph [ref=e95]: Your health dashboard
+          - generic [ref=e96]:
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - paragraph [ref=e101]: Clinics Visited
+                - paragraph [ref=e102]: "2"
+              - img [ref=e104]
+            - generic [ref=e110]:
+              - generic [ref=e111]:
+                - paragraph [ref=e112]: Upcoming Appointments
+                - paragraph [ref=e113]: "1"
+              - img [ref=e115]
+          - generic [ref=e117]:
+            - heading "Upcoming Appointments" [level=3] [ref=e119]
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - paragraph [ref=e123]: Al-Noor Clinic
+                - paragraph [ref=e124]: Dr. Karim Mansouri
+              - generic [ref=e125]:
+                - paragraph [ref=e126]: May 27, 2026
+                - paragraph [ref=e127]: 10:00 AM
+          - generic [ref=e128]:
+            - heading "Your Clinics" [level=3] [ref=e130]
+            - generic [ref=e131]:
+              - 'link "Al-Noor Clinic 1 visit · Last: May 19, 2026 View Records" [ref=e132] [cursor=pointer]':
+                - /url: /patient/records?clinicId=clinic-001
+                - generic [ref=e133]:
+                  - generic [ref=e134]:
+                    - img [ref=e136]
+                    - generic [ref=e140]:
+                      - paragraph [ref=e141]: Al-Noor Clinic
+                      - paragraph [ref=e142]: "1 visit · Last: May 19, 2026"
+                  - generic [ref=e143]: View Records
+              - link "Al-Salam Clinic 0 visits View Records" [ref=e144] [cursor=pointer]:
+                - /url: /patient/records?clinicId=clinic-002
+                - generic [ref=e145]:
+                  - generic [ref=e146]:
+                    - img [ref=e148]
+                    - generic [ref=e152]:
+                      - paragraph [ref=e153]: Al-Salam Clinic
+                      - paragraph [ref=e154]: 0 visits
+                  - generic [ref=e155]: View Records

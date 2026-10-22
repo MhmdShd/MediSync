@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #f5fffe;
+  --foreground: #12312e;
+  --card: #eafaf8;
+  --card-foreground: #12312e;
+  --popover: #eafaf8;
+  --popover-foreground: #12312e;
+  --primary: #2a9d8f;
+  --primary-foreground: #f5fffe;
+  --primary-dark: #015d67;
+  --secondary: #d1f4f2;
+  --secondary-foreground: #12312e;
+  --muted: #d1f4f2;
+  --muted-foreground: rgba(18, 49, 46, 0.55);
+  --accent: #eafaf8;
+  --accent-foreground: #015d67;
+  --destructive: #c0432f;
+  --destructive-foreground: #f5fffe;
+  --border: rgba(18, 49, 46, 0.10);
+  --input: rgba(18, 49, 46, 0.15);
+  --ring: #2a9d8f;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-schibsted), "Schibsted Grotesk", system-ui, sans-serif;
+}

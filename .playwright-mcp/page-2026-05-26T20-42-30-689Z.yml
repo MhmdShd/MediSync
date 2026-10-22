@@ -1,0 +1,53 @@
+- generic [ref=e1]:
+  - alert [ref=e41]
+  - generic [ref=e44]:
+    - complementary [ref=e46]:
+      - generic [ref=e47]:
+        - img [ref=e48]
+        - generic [ref=e52]: MediSync
+      - navigation [ref=e53]:
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - link "Dashboard" [ref=e56] [cursor=pointer]:
+              - /url: /patient/dashboard
+              - img [ref=e57]
+              - text: Dashboard
+          - listitem [ref=e62]:
+            - link "Records" [ref=e63] [cursor=pointer]:
+              - /url: /patient/records
+              - img [ref=e64]
+              - text: Records
+          - listitem [ref=e67]:
+            - link "Appointments" [ref=e68] [cursor=pointer]:
+              - /url: /patient/appointments
+              - img [ref=e69]
+              - text: Appointments
+          - listitem [ref=e71]:
+            - link "Profile" [ref=e72] [cursor=pointer]:
+              - /url: /patient/profile
+              - img [ref=e73]
+              - text: Profile
+    - generic [ref=e76]:
+      - banner [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - img [ref=e81]
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: Ali Hassan
+              - paragraph [ref=e86]: PATIENT
+          - button "Sign out" [ref=e87]:
+            - img [ref=e88]
+      - main [ref=e91]:
+        - generic [ref=e156]:
+          - heading "Medical Records" [level=1] [ref=e158]
+          - generic [ref=e159]:
+            - img [ref=e160]
+            - generic [ref=e164]: "Filter by clinic:"
+            - generic [ref=e165]:
+              - link "All Clinics" [ref=e166] [cursor=pointer]:
+                - /url: /patient/records
+              - link "Al-Noor Clinic" [ref=e167] [cursor=pointer]:
+                - /url: /patient/records?clinicId=clinic-001
+              - link "Al-Salam Clinic" [active] [ref=e168] [cursor=pointer]:
+                - /url: /patient/records?clinicId=clinic-002
+          - paragraph [ref=e188]: No records found.

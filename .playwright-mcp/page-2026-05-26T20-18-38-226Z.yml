@@ -1,0 +1,113 @@
+- generic:
+  - alert
+  - generic:
+    - generic:
+      - complementary:
+        - generic:
+          - img
+          - generic: MediSync
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: /clinic
+                - img
+                - text: Dashboard
+            - listitem:
+              - link:
+                - /url: /clinic/doctors
+                - img
+                - text: Doctors
+            - listitem:
+              - link:
+                - /url: /clinic/patients
+                - img
+                - text: Patients
+            - listitem:
+              - link:
+                - /url: /clinic/appointments
+                - img
+                - text: Appointments
+            - listitem:
+              - link:
+                - /url: /clinic/settings
+                - img
+                - text: Settings
+    - generic:
+      - banner:
+        - generic:
+          - generic:
+            - generic:
+              - img
+            - generic:
+              - paragraph: ahmad
+              - paragraph: CLINIC ADMIN
+          - button:
+            - img
+      - main:
+        - generic:
+          - generic:
+            - heading [level=1]: Appointments
+            - paragraph: Manage and book appointments for Ahmad Clinic
+          - generic:
+            - generic:
+              - textbox
+              - combobox
+              - button: Clear
+              - button: Book Appointment
+            - generic:
+              - generic:
+                - heading [level=3]: All Appointments
+              - generic:
+                - generic:
+                  - table:
+                    - rowgroup:
+                      - row:
+                        - columnheader: Date
+                        - columnheader: Time
+                        - columnheader: Patient
+                        - columnheader: Doctor
+                        - columnheader: Status
+                    - rowgroup:
+                      - row:
+                        - cell: Jun 3, 2026
+                        - cell: 11:30 – 12:00
+                        - cell: ali
+                        - cell: Zeinab
+                        - cell:
+                          - generic: SCHEDULED
+  - dialog "Edit Appointment" [ref=e202]:
+    - heading "Edit Appointment" [level=2] [ref=e204]
+    - generic [ref=e205]:
+      - generic [ref=e206]:
+        - generic [ref=e207]:
+          - text: Patient
+          - paragraph [ref=e208]: ali
+        - generic [ref=e209]:
+          - text: Doctor
+          - paragraph [ref=e210]: Zeinab
+        - generic [ref=e211]:
+          - text: Date
+          - paragraph [ref=e212]: 2026-06-03T00:00:00.000Z
+        - generic [ref=e213]:
+          - text: Time
+          - paragraph [ref=e214]: 11:30 – 12:00
+        - generic [ref=e215]:
+          - text: Status
+          - generic [ref=e217]: SCHEDULED
+      - generic [ref=e218]:
+        - text: Change Status
+        - combobox [active] [ref=e219]:
+          - option "SCHEDULED" [selected]
+          - option "CONFIRMED"
+          - option "IN PROGRESS"
+          - option "COMPLETED"
+          - option "CANCELLED"
+          - option "NO SHOW"
+      - generic [ref=e220]:
+        - button "Close" [ref=e221]
+        - button "Cancel Appt" [ref=e222]
+        - button "Update Status" [disabled]
+    - button "Close" [ref=e223]:
+      - img [ref=e224]
+      - generic [ref=e227]: Close

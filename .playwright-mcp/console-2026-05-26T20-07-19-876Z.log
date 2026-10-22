@@ -1,0 +1,5 @@
+[     246ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://77.68.52.135:7000/_next/static/chunks/0l0x7f86lzcbf.css:0
+[     259ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://77.68.52.135:7000/_next/static/chunks/0ja0f49zx08ih.js:0
+[     329ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://77.68.52.135:7000/login:0
+[     377ms] ChunkLoadError: Failed to load chunk /_next/static/chunks/0ja0f49zx08ih.js from module 55848
+    at http://77.68.52.135:7000/_next/static/chunks/turbopack-0mot58hqw1zf_.js:1:6129

@@ -1,0 +1,83 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e6]
+        - generic [ref=e10]: MediSync
+      - navigation [ref=e11]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - link "Dashboard" [ref=e14] [cursor=pointer]:
+              - /url: /clinic
+              - img [ref=e15]
+              - text: Dashboard
+          - listitem [ref=e20]:
+            - link "Doctors" [ref=e21] [cursor=pointer]:
+              - /url: /clinic/doctors
+              - img [ref=e22]
+              - text: Doctors
+          - listitem [ref=e34]:
+            - link "Patients" [ref=e35] [cursor=pointer]:
+              - /url: /clinic/patients
+              - img [ref=e36]
+              - text: Patients
+          - listitem [ref=e41]:
+            - link "Appointments" [ref=e42] [cursor=pointer]:
+              - /url: /clinic/appointments
+              - img [ref=e43]
+              - text: Appointments
+          - listitem [ref=e45]:
+            - link "Settings" [ref=e46] [cursor=pointer]:
+              - /url: /clinic/settings
+              - img [ref=e47]
+              - text: Settings
+    - generic [ref=e50]:
+      - banner [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - img [ref=e55]
+            - generic [ref=e58]:
+              - paragraph [ref=e59]: mhmd ali
+              - paragraph [ref=e60]: CLINIC ADMIN
+          - button "Sign out" [ref=e61]:
+            - img [ref=e62]
+      - main [ref=e65]:
+        - generic [ref=e66]:
+          - generic [ref=e67]:
+            - heading "Clinic Setup" [level=1] [ref=e68]
+            - paragraph [ref=e69]: Configure your clinic profile
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - heading "Clinic Information" [level=3] [ref=e72]
+              - paragraph [ref=e73]: This information will appear on your clinic's profile
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - generic [ref=e77]: Clinic Name*
+                - textbox "Clinic Name" [ref=e78]:
+                  - /placeholder: Al-Noor Clinic
+              - generic [ref=e79]:
+                - generic [ref=e80]: Address*
+                - textbox "Address" [ref=e81]:
+                  - /placeholder: 123 Main St, Baghdad
+              - generic [ref=e82]:
+                - generic [ref=e83]:
+                  - generic [ref=e84]: Phone Number*
+                  - generic [ref=e85]:
+                    - generic [ref=e86]:
+                      - button "US Flag" [ref=e87]:
+                        - img "US Flag" [ref=e88]
+                        - img [ref=e89]
+                      - textbox [ref=e91]: "+1"
+                    - textbox "Phone Number" [ref=e92]:
+                      - /placeholder: "7701234567"
+                - generic [ref=e93]:
+                  - text: Email
+                  - textbox "Email" [ref=e94]:
+                    - /placeholder: info@clinic.iq
+              - generic [ref=e95]:
+                - text: Timezone
+                - textbox "Timezone" [ref=e96]:
+                  - /placeholder: Asia/Baghdad
+                  - text: Asia/Baghdad
+              - button "Save Clinic" [ref=e97]
+  - alert [ref=e98]

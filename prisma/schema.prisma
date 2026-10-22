@@ -1,0 +1,235 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  CLINIC_ADMIN
+  DOCTOR
+  PATIENT
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+enum DoctorRole {
+  ATTENDING
+  CONSULTANT
+  VISITING
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+model User {
+  id           String   @id @default(uuid())
+  phone        String   @unique
+  username     String?  @unique
+  passwordHash String
+  role         Role
+  name         String
+  email        String?  @unique
+  avatarUrl    String?
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  doctor       Doctor?
+  patient      Patient?
+  clinicsOwned Clinic[]
+
+  @@index([role])
+  @@index([username])
+}
+
+model Clinic {
+  id             String   @id @default(uuid())
+  name           String
+  address        String
+  phone          String
+  email          String?
+  logoUrl        String?
+  coverUrl       String?
+  timezone       String   @default("UTC")
+  operatingHours Json
+  isActive       Boolean  @default(true)
+  ownerId        String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  owner          User            @relation(fields: [ownerId], references: [id])
+  clinicDoctors  ClinicDoctor[]
+  clinicPatients ClinicPatient[]
+  appointments   Appointment[]
+  medicalRecords MedicalRecord[]
+
+  @@index([ownerId])
+  @@index([phone])
+}
+
+model Doctor {
+  id             String   @id @default(uuid())
+  userId         String   @unique
+  phone          String   @unique
+  name           String
+  specialization String?
+  licenseNumber  String?
+  bio            String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user           User             @relation(fields: [userId], references: [id])
+  clinicDoctors  ClinicDoctor[]
+  schedules      DoctorSchedule[]
+  appointments   Appointment[]
+  medicalRecords MedicalRecord[]
+
+  @@index([phone])
+}
+
+model Patient {
+  id               String    @id @default(uuid())
+  userId           String?   @unique
+  phone            String    @unique
+  name             String
+  dateOfBirth      DateTime?
+  gender           Gender?
+  bloodType        String?
+  address          String?
+  emergencyContact String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  user             User?           @relation(fields: [userId], references: [id])
+  clinicPatients   ClinicPatient[]
+  appointments     Appointment[]
+  medicalRecords   MedicalRecord[]
+
+  @@index([phone])
+}
+
+model ClinicDoctor {
+  id        String     @id @default(uuid())
+  clinicId  String
+  doctorId  String
+  role      DoctorRole @default(ATTENDING)
+  isActive  Boolean    @default(true)
+  joinedAt  DateTime   @default(now())
+  leftAt    DateTime?
+
+  clinic    Clinic @relation(fields: [clinicId], references: [id])
+  doctor    Doctor @relation(fields: [doctorId], references: [id])
+
+  @@unique([clinicId, doctorId])
+  @@index([clinicId])
+  @@index([doctorId])
+}
+
+model ClinicPatient {
+  id           String    @id @default(uuid())
+  clinicId     String
+  patientId    String
+  registeredAt DateTime  @default(now())
+  lastVisitAt  DateTime?
+
+  clinic       Clinic  @relation(fields: [clinicId], references: [id])
+  patient      Patient @relation(fields: [patientId], references: [id])
+
+  @@unique([clinicId, patientId])
+  @@index([clinicId])
+  @@index([patientId])
+}
+
+model DoctorSchedule {
+  id                  String  @id @default(uuid())
+  doctorId            String
+  clinicId            String
+  dayOfWeek           Int
+  startTime           String
+  endTime             String
+  slotDurationMinutes Int     @default(30)
+  isActive            Boolean @default(true)
+
+  doctor Doctor @relation(fields: [doctorId], references: [id])
+
+  @@unique([doctorId, clinicId, dayOfWeek])
+  @@index([doctorId])
+  @@index([clinicId])
+}
+
+model Appointment {
+  id           String            @id @default(uuid())
+  clinicId     String
+  doctorId     String
+  patientId    String
+  date         DateTime          @db.Date
+  startTime    String
+  endTime      String
+  status       AppointmentStatus @default(SCHEDULED)
+  notes        String?
+  cancelReason String?
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+
+  clinic         Clinic          @relation(fields: [clinicId], references: [id])
+  doctor         Doctor          @relation(fields: [doctorId], references: [id])
+  patient        Patient         @relation(fields: [patientId], references: [id])
+  medicalRecords MedicalRecord[]
+
+  @@unique([doctorId, clinicId, date, startTime])
+  @@index([clinicId])
+  @@index([patientId])
+  @@index([date])
+  @@index([doctorId])
+}
+
+model MedicalRecord {
+  id            String    @id @default(uuid())
+  appointmentId String?
+  clinicId      String
+  doctorId      String
+  patientId     String
+  diagnosis     String?
+  notes         String?
+  prescription  String?
+  visitDate     DateTime  @db.Date
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  appointment     Appointment?     @relation(fields: [appointmentId], references: [id])
+  clinic          Clinic           @relation(fields: [clinicId], references: [id])
+  doctor          Doctor           @relation(fields: [doctorId], references: [id])
+  patient         Patient          @relation(fields: [patientId], references: [id])
+  fileAttachments FileAttachment[]
+
+  @@index([clinicId, patientId])
+  @@index([appointmentId])
+  @@index([doctorId])
+}
+
+model FileAttachment {
+  id         String   @id @default(uuid())
+  recordId   String
+  fileName   String
+  fileUrl    String
+  fileType   String
+  fileSize   Int
+  uploadedBy String
+  createdAt  DateTime @default(now())
+
+  record MedicalRecord @relation(fields: [recordId], references: [id])
+
+  @@index([recordId])
+}
